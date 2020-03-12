@@ -3,6 +3,7 @@
   text-transform: uppercase;
 
   &__list {
+    padding: 0;
     display: flex;
     justify-content: center;
     list-style: none;
@@ -32,5 +33,6 @@
 @media screen and (max-width: 999px) {
   .nav__list {
     flex-direction: column;
+    align-items: center;
   }
 }
