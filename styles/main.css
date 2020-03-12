@@ -130,8 +130,9 @@ h1 {
     color: #0075ff; }
 
 .gallery__caption {
-  margin-top: 24px;
-  margin-bottom: 40px; }
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 40px; }
 
 .gallery__button {
   margin: 40px auto 152px;
@@ -145,21 +146,20 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   .photos__img {
-    width: 50%;
-    margin-left: 10px;
-    margin-bottom: 24px;
+    width: calc(50% - 10px);
     height: 256px;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
-       object-position: center; }
-  .photos_wide_left .photos__img:first-child {
+       object-position: center;
+    border-radius: 8px; }
+  .photos_wide_left .photos__img:nth-child(1) {
     width: calc(67% - 10px); }
-  .photos_wide_left .photos__img:last-child {
+  .photos_wide_left .photos__img:nth-child(2) {
     width: calc(33% - 10px); }
-  .photos_wide_right .photos__img:first-child {
+  .photos_wide_right .photos__img:nth-child(1) {
     width: calc(33% - 10px); }
-  .photos_wide_right .photos__img:last-child {
+  .photos_wide_right .photos__img:nth-child(2) {
     width: calc(67% - 10px); }
 
 .heading {
@@ -184,6 +184,20 @@ h1 {
   .button:hover {
     background-color: #0075ff;
     color: white; }
+
+.consultation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .consultation__heading {
+    margin-top: 69px; }
+  .consultation__text {
+    width: 412px; }
+  .consultation__form {
+    width: 413px; }
 
 body {
   background: #eee;
