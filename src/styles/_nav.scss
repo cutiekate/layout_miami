@@ -12,6 +12,11 @@
   &__item {
     padding: 8px 24px;
     margin: 0 38px;
+    border-radius: 8px;
+
+    &_active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
 
   }
 
@@ -22,5 +27,10 @@
     text-decoration: none;
     transition: 0.5s;
 
+  }
+}
+@media screen and (max-width: 999px) {
+  .nav__list {
+    flex-direction: column;
   }
 }

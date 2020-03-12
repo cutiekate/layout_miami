@@ -12,7 +12,7 @@
     right: 0;
 
   }
-  
+
   &__top {
     position: absolute;
     display: flex;
@@ -44,4 +44,9 @@
     padding-bottom: 8px;
   }
 
+}
+@media screen and (max-width: 999px) {
+  .header__top {
+    flex-direction: column;
+  }
 }
