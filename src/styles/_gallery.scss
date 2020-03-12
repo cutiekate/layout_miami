@@ -1,7 +1,9 @@
 .gallery {
+
   &__caption {
-    margin-top: 24px;
-    margin-bottom: 40px;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 40px;
   }
 
   &__button {
