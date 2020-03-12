@@ -153,14 +153,14 @@ h1 {
        object-fit: cover;
     -o-object-position: center;
        object-position: center; }
-  .photos_wide_right .photos__img:first-child {
-    width: calc(33% - 10px); }
-  .photos_wide_right .photos__img:last-child {
-    width: calc(67% - 10px); }
   .photos_wide_left .photos__img:first-child {
     width: calc(67% - 10px); }
   .photos_wide_left .photos__img:last-child {
     width: calc(33% - 10px); }
+  .photos_wide_right .photos__img:first-child {
+    width: calc(33% - 10px); }
+  .photos_wide_right .photos__img:last-child {
+    width: calc(67% - 10px); }
 
 .heading {
   text-align: center;
