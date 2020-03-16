@@ -1,9 +1,14 @@
 .consultation {
   display: flex;
   justify-content: space-between;
+  margin-top: 93px;
 
   &__heading {
-    margin-top: 69px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #0075ff;
   }
 
   &__text {
@@ -12,5 +17,16 @@
 
   &__form {
     width: 413px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .consultation {
+    flex-direction: column;
+
+    &__text,
+    &__form {
+      width: 100%;
+    }
   }
 }

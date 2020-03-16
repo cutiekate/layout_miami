@@ -9,19 +9,25 @@
   <body>
   <header class="header">
     <div class="header__top">
-      <div class="header__phone">+1 234 555-55-55</div>
+      <div ><a class="header__phone"href="tel:+1 234 555-55-55">+1 234 555-55-55</a>
+        <!-- <img src="images/phone.svg" alt="Call to order" class="header__phone_img"> -->
+      </div>
       <div class="logo header__logo"><img  class="header__logo_img" src="./images/logo.png" alt="miami"></div>
       <div class="header__action"><a href="#" class="header__link">call to order</a></div>
     </div>
     <div class="header__text">Miami<br>Condo Kings</div>
     <nav class="nav header__nav">
+      <input type="checkbox" class="header__toggler" id="toggler">
+      <label for="toggler" class="header__toggler_label">
+        <span></span>
+      </label>
       <ul class="nav__list">
         <li class="nav__item nav__item_active"><a class="nav__link" href="#">Home</a></li>
-        <li class="nav__item nav__item_active"><a class="nav__link" href="#">About us</a></li>
-        <li class="nav__item nav__item_active"><a class="nav__link" href="#">Gallery</a></li>
-        <li class="nav__item nav__item_active"><a class="nav__link" href="#">Consultation</a></li>
-        <li class="nav__item nav__item_active"><a class="nav__link" href="#">Testimonials</a></li>
-        <li class="nav__item nav__item_active"><a class="nav__link" href="#">Contacts</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">About us</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Gallery</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Consultation</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Testimonials</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Contacts</a></li>
       </ul>
     </nav>
   </header>
@@ -57,30 +63,71 @@
       </div>
     </section>
     <section class="section">
+      <h2 class="heading">Consultation<span class="heading__crown"></span></h2>
       <div class="consultation">
-        <h2 class="heading">Consultation<span class="heading__crown"></span></h2>
         <div class="consultation__text">
-          <h3 class="consultation__heading">How long have you do yourself a gift?</h3>
+          <h3 class="consultation__heading">How long have you do<br> yourself a gift?</h3>
           <p>The procedural change mezzo forte starts izoritmichesky<br> pickup at these moments stop LA Mazel and VA<br> Tsukkerman in his "Analysis of musical works."<br> Pointillism, which originated in the music of the early<br> twentieth century, microforms, found a distant historical.</p>
         </div>
-        <form class="form consultation__form">
-          <label><input type="text" name="name" placeholder="Name"></label>
-          <label><input type="text" name="phone" placeholder="Phone"></label>
-          <label><input type="text" name="email" placeholder="Email"></label>
+        <form class="form consultation__form" action="" method="GET">
+          <label class="form__item"><input type="text" name="name" placeholder="Name" class="input form__input"></label>
+          <label class="form__item"><input type="text" name="phone" placeholder="Phone" class="input form__input"></label>
+          <label class="form__item"><input type="text" name="email" placeholder="Email" class="input form__input"></label>
           <button class="button form__button">Consultation</button>
         </form>
       </div>
     </section>
-    <!-- <section class="section">
-      <h2 class="heading section__heading">Consultation<span class="heading__crown"></span></h2>
+    <section class="section">
+      <h2 class="heading section__heading">Testimonials<span class="heading__crown"></span></h2>
+      <div class="testimonials">
+        <div class="person">
+          <img class="person__photo" alt="" src="images/people/1.svg">
+          <h3 class="person__name">Leslie Mckinney</h3>
+          <p class="person__position">CEO</p>
+          <p class="person__text">Nice work, Certificates National<br> Association of Realtors (USA)</p>
+        </div>
+        <div class="person">
+          <img class="person__photo" alt="" src="images/people/2.svg">
+          <h3 class="person__name">Scarlett Hawkins</h3>
+          <p class="person__position">Senior Vice President</p>
+          <p class="person__text">My soul is illuminated by an<br> unearthly joy, as these beautiful<br> spring morning, which I enjoy<br> with all my heart</p>
+        </div>
+        <div class="person">
+          <img class="person__photo" alt="" src="images/people/3.svg">
+          <h3 class="person__name">Max Henry</h3>
+          <p class="person__position">Chief Design Officer</p>
+          <p class="person__text">When my lovely valley of steam<br> rises and half-day sun is above an<br> impermeable)</p>
+        </div>
+      </div>
     </section>
     <section class="section">
-      <h2 class="heading section__heading">Consultation<span class="heading__crown"></span></h2>
+      <h2 class="heading section__heading">Contact Us<span class="heading__crown"></span></h2>
+      <div class="contact">
+        <div class="contact__text">
+          <div class="contact__text_left">
+            <p class="contact__text_heading">Phone</p>
+            <p><a href="#">+1 234 5555-55-55</a></p>
+            <p class="contact__text_heading">Email</p>
+            <p><a href="mailto:hello@miami.com">hello@miami.com</a></p>
+          </div>
+          <div class="contact__text_right">
+            <p class="contact__text_heading">Address</p>
+            <p>400 first ave. n.<br>suite 700<br>Minneapolis, MN<br>55401</p>
+          </div>
+        </div>
+        <form class="form contact__form" action="" method="GET">
+          <label class="form__item"><input type="text" name="name" placeholder="Name" class="input form__input"></label>
+          <label class="form__item"><input type="text" name="phone" placeholder="Email" class="input form__input"></label>
+          <label class="form__item"><textarea name="message" placeholder="Message" class="input input_textarea form__input"></textarea></label>
+          <button class="button form__button">Write to us</button>
+        </form>
+      </div>
     </section>
-    <section class="section">
-      <h2 class="heading section__heading">Consultation<span class="heading__crown"></span></h2>
-    </section> -->
   </main>
+  <footer class="footer">
+    <div class="logo footer__logo"><img  class="footer__logo_img" src="./images/logo.png" alt="miami"></div>
+
+  </footer>
 
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>

@@ -34,3 +34,22 @@
     }
   }
 }
+@media screen and (max-width: 500px) {
+  .photos_wide_left,
+  .photos_wide_right {
+    .photos__img {
+      width: calc(50% - 10px);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .photos {
+    height: 131px;
+
+    &__img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
