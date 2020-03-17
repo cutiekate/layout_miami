@@ -12,7 +12,7 @@
 
   &__item {
     padding: 8px 24px;
-    margin: 0 38px;
+    margin: 0 32px;
     border-radius: 8px;
     transition: 0.8s;
 
@@ -37,15 +37,27 @@
     display: none;
   }
 }
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 1124px) {
   .nav__item {
     margin: 0 15px;
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1023px) {
   .nav__item {
-    margin: 0 5px;
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .nav__item {
+    margin: 0 -1px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav__item {
+    margin: 0 -8px;
   }
 }
 @media screen and (max-width: 750px) {
