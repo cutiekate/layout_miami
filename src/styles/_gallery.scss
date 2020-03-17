@@ -1,0 +1,13 @@
+.gallery {
+
+  &__caption {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  &__button {
+    margin: 40px auto 0;
+    padding: 21px 65px;
+  }
+}

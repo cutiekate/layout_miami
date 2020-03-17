@@ -1,0 +1,37 @@
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 53px;
+  padding-bottom: 88px;
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    width: 413px;
+    font-size: 16px;
+    line-height: 27px;
+
+  }
+  &__text_heading {
+    margin-top: 0;
+    color: #9fadc2;
+  }
+
+  &__form {
+    width: 413px;
+
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact {
+    flex-direction: column;
+
+    &__text {
+      flex-direction: column;
+      width: 100%;
+    }
+    &__form {
+      width: 100%;
+    }
+  }
+
+}
