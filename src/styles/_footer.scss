@@ -11,7 +11,10 @@
     position: absolute;
     margin: auto;
     bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
   }
+
   &__logo_img {
     height: 76px;
   }
