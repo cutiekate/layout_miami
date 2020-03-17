@@ -32,6 +32,18 @@
     &:hover {
       color: lightgrey;
     }
+
+    @media (max-width: 750px) {
+      & {
+        position: absolute;
+        top: 16px;
+        left: -86px;
+        width: 18px;
+        height: 18px;
+        font-size: 0;
+        background-image: url(../images/phone-icon.svg);
+      }
+    }
   }
 
   &__text {
@@ -42,6 +54,34 @@
     font-weight: bold;
     line-height: 60px;
     color: white;
+
+    @media (max-width: 999px) {
+      & {
+        font-size: 55px;
+        line-height: 50px;
+      }
+    }
+
+    @media (max-width: 750px) {
+      & {
+        top: 407px;
+        letter-spacing: -1px;
+        font-size: 46px;
+        line-height: 40px;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -16px;
+      width: 35px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: white;
+    }
+
   }
 
   &__link {
@@ -76,25 +116,68 @@
     padding-bottom: 8px;
   }
 
+  &__toggle_icon {
+    display: none;
+    width: 18px;
+    height: 12px;
+    background-image: url(../images/menu-icon.svg);
+    cursor: pointer;
+    transition: background-image 0.2s;
+  }
+
+  &__toggle_button {
+    display: none;
+  }
+
 }
 
-&__toggler_label {
-  display: block;
-  position: absolute;
-  top: 110px;
-  right: 24px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 1;
+@media (max-width: 750px) {
+  .header {
+    height: 100vh;
+  }
+}
+@media (max-width: 750px) {
+  &:checked ~ .nav {
+    display: block;
+    top: 0;
+    bottom: 0;
+    margin: -24px -20px 0;
+
+    & .nav__list {
+      position: absolute;
+      animation: 0.8s anim-menu;
+
+      @keyframes anim-menu {
+        from {
+          left: -200px;
+        }
+        to {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &:checked + .header__toggle_icon {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/menu-close-icon.svg);
+  }
 }
 
-&__phone_img {
-  display: none;
-}
 
-@media screen and (max-width: 999px) {
-  .header__top {
-    flex-direction: column;
+
+@media (max-width: 750px) {
+  .header__toggle_icon {
+    display: block;
+    position: absolute;
+    top: 45px;
+    right: 23px;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .header__link {
+    display: none;
   }
 }

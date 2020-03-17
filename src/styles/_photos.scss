@@ -35,10 +35,27 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .photos_wide_left,
+  .photos_wide_left {
+    .photos__img {
+      &:nth-child(1) {
+        width: calc(50% - 10px);
+      }
+
+      &:nth-child(2) {
+        width: calc(50% - 10px);
+      }
+    }
+  }
+
   .photos_wide_right {
     .photos__img {
-      width: calc(50% - 10px);
+      &:nth-child(1) {
+        width: calc(50% - 10px);
+      }
+
+      &:nth-child(2) {
+        width: calc(50% - 10px);
+      }
     }
   }
 }
