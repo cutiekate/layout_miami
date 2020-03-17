@@ -36,17 +36,32 @@ h1 {
     color: white;
     text-decoration: none;
     -webkit-transition: 0.5s;
-    transition: 0.5s; }
+    transition: 0.5s;
+    white-space: nowrap; }
+  .nav__toggler {
+    display: none; }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1100px) {
+  .nav__item {
+    margin: 0 5px; } }
+
+@media screen and (max-width: 750px) {
   .nav__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; } }
+    padding-top: 120px;
+    padding-left: 21px; }
+  .nav {
+    display: none;
+    background-color: #0075ff; }
+  .nav__link {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 32px;
+    vertical-align: auto; } }
 
 .header {
   height: 700px;
@@ -81,6 +96,15 @@ h1 {
     transition: color 0.8s; }
     .header__phone:hover {
       color: lightgrey; }
+    @media (max-width: 750px) {
+      .header__phone {
+        position: absolute;
+        top: 16px;
+        left: -86px;
+        width: 18px;
+        height: 18px;
+        font-size: 0;
+        background-image: url(../images/phone-icon.svg); } }
   .header__text {
     position: absolute;
     top: 414px;
@@ -89,6 +113,25 @@ h1 {
     font-weight: bold;
     line-height: 60px;
     color: white; }
+    @media (max-width: 999px) {
+      .header__text {
+        font-size: 55px;
+        line-height: 50px; } }
+    @media (max-width: 750px) {
+      .header__text {
+        top: 407px;
+        letter-spacing: -1px;
+        font-size: 46px;
+        line-height: 40px; } }
+    .header__text:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -16px;
+      width: 35px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: white; }
   .header__link {
     text-decoration: none;
     color: #fff;
@@ -112,20 +155,79 @@ h1 {
   .header__action {
     position: relative;
     padding-bottom: 8px; }
+  .header__toggle_icon {
+    display: none;
+    width: 18px;
+    height: 12px;
+    background-image: url(../images/menu-icon.svg);
+    cursor: pointer;
+    -webkit-transition: background-image 0.2s;
+    transition: background-image 0.2s; }
+  .header__toggle_button {
+    display: none; }
 
-@media screen and (max-width: 999px) {
-  .header__top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
+@media (max-width: 750px) {
+  .header {
+    height: 100vh; } }
+
+@media (max-width: 750px) {
+  :checked ~ .nav {
+    display: block;
+    top: 0;
+    bottom: 0;
+    margin: -24px -20px 0; }
+    :checked ~ .nav .nav__list {
+      position: absolute;
+      -webkit-animation: 0.8s anim-menu;
+              animation: 0.8s anim-menu; }
+  @-webkit-keyframes anim-menu {
+    from {
+      left: -200px; }
+    to {
+      left: 0; } }
+  @keyframes anim-menu {
+    from {
+      left: -200px; }
+    to {
+      left: 0; } }
+  :checked + .header__toggle_icon {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/menu-close-icon.svg); } }
+
+@media (max-width: 750px) {
+  .header__toggle_icon {
+    display: block;
+    position: absolute;
+    top: 45px;
+    right: 23px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 1; }
+  .header__link {
+    display: none; } }
 
 .section {
   position: relative;
   padding-top: 104px;
   padding-bottom: 0;
   padding-left: 120px;
-  margin-right: 120px; }
+  padding-right: 120px; }
+
+@media screen and (max-width: 999px) {
+  .section {
+    padding-left: 80px;
+    padding-right: 80px; } }
+
+@media screen and (max-width: 750px) {
+  .section {
+    padding-left: 40px;
+    padding-right: 40px; } }
+
+@media screen and (max-width: 500px) {
+  .section {
+    padding-left: 20px;
+    padding-right: 21px; } }
 
 .info {
   display: -webkit-box;
@@ -195,8 +297,13 @@ h1 {
     width: calc(67% - 10px); }
 
 @media screen and (max-width: 500px) {
-  .photos_wide_left .photos__img,
-  .photos_wide_right .photos__img {
+  .photos_wide_left .photos__img:nth-child(1) {
+    width: calc(50% - 10px); }
+  .photos_wide_left .photos__img:nth-child(2) {
+    width: calc(50% - 10px); }
+  .photos_wide_right .photos__img:nth-child(1) {
+    width: calc(50% - 10px); }
+  .photos_wide_right .photos__img:nth-child(2) {
     width: calc(50% - 10px); } }
 
 @media screen and (max-width: 500px) {
@@ -323,15 +430,23 @@ main {
     height: 144px; }
 
 .testimonials {
-  display: grid;
-  grid-gap: 150px;
-  grid-template-columns: repeat(3, 240px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 93px; }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 850px) {
   .testimonials {
-    grid-gap: 48px;
-    grid-template-columns: repeat(1, 240px); } }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 .person__photo {
   padding-left: 43px;
@@ -361,6 +476,11 @@ main {
   line-height: 27px;
   color: #3e3e3e; }
 
+@media screen and (max-width: 500px) {
+  .person__photo {
+    padding-left: 83px;
+    padding-right: 84px; } }
+
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -369,7 +489,7 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 53px;
-  margin-bottom: 88px; }
+  padding-bottom: 88px; }
   .contact__text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -412,8 +532,7 @@ main {
   background-position: center; }
   .footer__logo {
     position: absolute;
-    left: 572px;
-    right: 572px;
+    margin: auto;
     bottom: 40px; }
   .footer__logo_img {
     height: 76px; }
