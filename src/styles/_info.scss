@@ -4,7 +4,6 @@
 
   &__heading {
     margin: 0;
-    width: 328px;
     height: 97px;
     font-size: 48px;
     line-height: 48px;
@@ -26,6 +25,7 @@
     color: #0075ff;
   }
 }
+
 @media screen and (max-width: 500px) {
   .info {
     flex-direction: column;
@@ -33,6 +33,11 @@
     &__text {
       padding-top: 48px;
       width: 100%;
+    }
+  }
+@media screen and (max-width: 320px) {
+    .info__heading {
+      font-size: 40px;
     }
   }
 }
